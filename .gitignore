@@ -39,8 +39,10 @@ testem.log
 Thumbs.db
 
 .nx/cache
+/apps/weather-app/.env.local
 
 # Next.js
 .next
 out
 nx.json
+.env
