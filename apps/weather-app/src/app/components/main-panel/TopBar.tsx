@@ -13,18 +13,18 @@ export default function TopBar({
       <div className="flex gap-2 text-[23px]">
         <div
           className={`flex ${
-            isFaranheit ? 'bg-white' : 'bg-[#585676] hover:cursor-pointer'
-          } 
-          ${isFaranheit ? 'text-black' : 'text-white'}
-          rounded-full w-[50px] h-[50px] items-center justify-center`}
+            isFaranheit ? 'bg-[#585676] text-white' : 'bg-white text-black'
+          }
+          rounded-full w-[50px] h-[50px] items-center justify-center hover:cursor-pointer select-none`}
           onClick={() => setIsFaranheitHandler(false)}
         >
           °C
         </div>
         <div
-          className={`flex ${isFaranheit ? 'bg-[#585676]' : 'bg-white'} 
-          ${isFaranheit ? 'text-white' : 'text-[#585676]'}
-          rounded-full w-[50px] h-[50px] items-center justify-center hover:cursor-pointer`}
+          className={`flex ${
+            isFaranheit ? 'bg-white text-black' : 'bg-[#585676] text-white'
+          } 
+          rounded-full w-[50px] h-[50px] items-center justify-center hover:cursor-pointer select-none`}
           onClick={() => setIsFaranheitHandler(true)}
         >
           °F

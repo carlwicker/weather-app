@@ -5,17 +5,19 @@ interface LeftPanelProps {
   setNewLocation: Function;
   isFaranheit: boolean;
   data: any;
+  convertToCelsius: Function;
 }
 
 export default function LeftPanel({
   setNewLocation,
   isFaranheit,
   data,
+  convertToCelsius,
 }: LeftPanelProps) {
   const formattedDate = formatEpoch(data?.currentConditions.datetimeEpoch);
 
   return (
-    <div className="w-[555px] h-screen bg-[#1E213A] p-10 text-white flex flex-col items-center">
+    <div className="w-[555px] min-w-fit bg-[#1E213A] p-10 text-white flex flex-col items-center">
       <Search setNewLocation={setNewLocation} />
 
       <div className="pt-[150px] text-[64px] capitalize">{data?.address}</div>
@@ -31,7 +33,9 @@ export default function LeftPanel({
       )}
       <div>
         <div className="text-[60px]">
-          {data?.days[0].temp}
+          {isFaranheit
+            ? Math.round(data?.currentConditions.temp ?? 0)
+            : convertToCelsius(data?.currentConditions.temp)}
           <span className="text-[28px]">{isFaranheit ? '°F' : '°C'}</span>
         </div>
       </div>

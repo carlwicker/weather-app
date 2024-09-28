@@ -6,7 +6,7 @@ import MainPanel from './components/main-panel/MainPanel';
 
 export default function Index() {
   const apiKey = process.env.NEXT_PUBLIC_WEATHER_API_KEY;
-  const [isFaranheit, setIsFaranheit] = useState<boolean>(true);
+  const [isFaranheit, setIsFaranheit] = useState<boolean>(false);
   const [location, setLocation] = useState<string>('Brighton');
   const [data, setData] = useState<string | null>(null);
 
@@ -14,9 +14,14 @@ export default function Index() {
     setLocation(newLocation);
   };
 
-  const setIsFaranheitHandler = (bool: any) => {
+  const setIsFaranheitHandler = (bool: boolean) => {
     setIsFaranheit(bool);
   };
+
+  function convertToCelsius(fahrenheit: number): number {
+    const celsius = ((fahrenheit - 32) * 5) / 9;
+    return Math.round(celsius);
+  }
 
   useEffect(() => {
     const data = fetch(
@@ -27,16 +32,18 @@ export default function Index() {
   }, [location]);
 
   return (
-    <div className="flex bg-[#100E1D] h-screen w-screen">
+    <div className="flex bg-[#100E1D]">
       <LeftPanel
         data={data}
         setNewLocation={setNewLocation}
         isFaranheit={isFaranheit}
+        convertToCelsius={convertToCelsius}
       />
       <MainPanel
         isFaranheit={isFaranheit}
         setIsFaranheitHandler={setIsFaranheitHandler}
         data={data}
+        convertToCelsius={convertToCelsius}
       />
     </div>
   );
