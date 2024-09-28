@@ -1,12 +1,22 @@
 import Search from './Search';
 import formatEpoch from '../../../utils/utils';
 
-export default function LeftPanel({ data, newLocation }: any) {
+interface LeftPanelProps {
+  setNewLocation: Function;
+  isFaranheit: boolean;
+  data: any;
+}
+
+export default function LeftPanel({
+  setNewLocation,
+  isFaranheit,
+  data,
+}: LeftPanelProps) {
   const formattedDate = formatEpoch(data?.currentConditions.datetimeEpoch);
 
   return (
     <div className="w-[555px] h-screen bg-[#1E213A] p-10 text-white flex flex-col items-center">
-      <Search newLocation={newLocation} />
+      <Search setNewLocation={setNewLocation} />
 
       <div className="pt-[150px] text-[64px] capitalize">{data?.address}</div>
 
@@ -19,7 +29,12 @@ export default function LeftPanel({ data, newLocation }: any) {
           className="w-[233px] h-[140px]"
         />
       )}
-      <div className="text-[60px]">{data?.days[0].temp}°F</div>
+      <div>
+        <div className="text-[60px]">
+          {data?.days[0].temp}
+          <span className="text-[28px]">{isFaranheit ? '°F' : '°C'}</span>
+        </div>
+      </div>
 
       <div className="text-[30px] capitalize">
         {data?.currentConditions.conditions}

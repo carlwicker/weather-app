@@ -1,10 +1,25 @@
-export default function MainPanel({ data, isFaranheit, setIsFaranheit }: any) {
+import TopBar from './TopBar';
+
+export default function MainPanel({
+  setIsFaranheitHandler,
+  isFaranheit,
+  data,
+}: {
+  setIsFaranheitHandler: Function;
+  isFaranheit: boolean;
+  data: any;
+}) {
   return (
     <div className="p-10 w-full">
       <div
-        className="max-w-[1020px] mx-auto min-w-[600px] bg-red-500 h-[200px]
+        className="max-w-[1020px] mx-auto h-[200px]
       "
-      ></div>
+      >
+        <TopBar
+          setIsFaranheitHandler={setIsFaranheitHandler}
+          isFaranheit={isFaranheit}
+        />
+      </div>
     </div>
   );
 }

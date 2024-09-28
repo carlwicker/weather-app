@@ -2,15 +2,15 @@ import { useState, useEffect } from 'react';
 import { FaAngleRight } from 'react-icons/fa';
 
 interface SearchProps {
-  newLocation: (location: string) => void;
+  setNewLocation: Function;
 }
 
-export default function Search({ newLocation }: SearchProps) {
+export default function Search({ setNewLocation }: SearchProps) {
   const [query, setQuery] = useState<string>('');
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    newLocation(query);
+    setNewLocation(query);
   };
 
   return (

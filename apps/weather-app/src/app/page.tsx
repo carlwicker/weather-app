@@ -10,12 +10,12 @@ export default function Index() {
   const [location, setLocation] = useState<string>('Brighton');
   const [data, setData] = useState<string | null>(null);
 
-  const newLocation = (newLocation: string) => {
+  const setNewLocation = (newLocation: string) => {
     setLocation(newLocation);
   };
 
-  const setIsFaranheitHandler = () => {
-    setIsFaranheit(!isFaranheit);
+  const setIsFaranheitHandler = (bool: any) => {
+    setIsFaranheit(bool);
   };
 
   useEffect(() => {
@@ -25,15 +25,18 @@ export default function Index() {
       .then((response) => response.json())
       .then((data) => setData(data)).then;
   }, [location]);
-  console.log(data);
 
   return (
     <div className="flex bg-[#100E1D] h-screen w-screen">
-      <LeftPanel data={data} newLocation={newLocation} />
-      <MainPanel
+      <LeftPanel
         data={data}
+        setNewLocation={setNewLocation}
         isFaranheit={isFaranheit}
-        setIsFaranheit={setIsFaranheitHandler}
+      />
+      <MainPanel
+        isFaranheit={isFaranheit}
+        setIsFaranheitHandler={setIsFaranheitHandler}
+        data={data}
       />
     </div>
   );
