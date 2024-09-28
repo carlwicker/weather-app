@@ -18,11 +18,11 @@ Fork this branch and then design, organise, test, lint and document your code us
 
 You have complete freedom over how and how long you want to spend to deliver the following requirements:
 
-- The app can be accessed through a public URL. - DONE
-- On first load, the app should show the weather for a specific place. - DONE
-- Users can see accurate and relevant weather information based on their search. - DONE
-- Users are able to see relevant information displayed in different metrics. - DONE
-- Users are notified if there is no information returned from their search.
+- The app can be accessed through a public URL. ✔️
+- On first load, the app should show the weather for a specific place. ✔️
+- Users can see accurate and relevant weather information based on their search. ✔️
+- Users are able to see relevant information displayed in different metrics. ✔️
+- Users are notified if there is no information returned from their search. - WIP
 
 ### Development
 
