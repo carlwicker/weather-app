@@ -3,12 +3,17 @@ import SunBox from './SunBox';
 import BarBox from './BarBox';
 import ForcastBox from './ForcastBox';
 
+interface OverviewGridProps {
+  data: any;
+  isFaranheit: boolean;
+  convertToCelsius: Function;
+}
+
 export default function OverviewGrid({
   data,
-  setIsFaranheitHandler,
   isFaranheit,
   convertToCelsius,
-}: any) {
+}: OverviewGridProps) {
   return (
     <div className="flex flex-col gap-10 text-white">
       <div className="flex gap-10 w-full h-[200px] mt-[62px] min-h-[160px]">

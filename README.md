@@ -18,10 +18,10 @@ Fork this branch and then design, organise, test, lint and document your code us
 
 You have complete freedom over how and how long you want to spend to deliver the following requirements:
 
-- The app can be accessed through a public URL.
-- On first load, the app should show the weather for a specific place.
-- Users can see accurate and relevant weather information based on their search.
-- Users are able to see relevant information displayed in different metrics.
+- The app can be accessed through a public URL. - DONE
+- On first load, the app should show the weather for a specific place. - DONE
+- Users can see accurate and relevant weather information based on their search. - DONE
+- Users are able to see relevant information displayed in different metrics. - DONE
 - Users are notified if there is no information returned from their search.
 
 ### Development
@@ -43,3 +43,16 @@ Please include some information that considers certain areas for future improvem
 - Accessibility.
 - Potential performance bottle necks and optimisations
 - High fault tolerance.
+
+NOTES FROM DEVELOPER:
+
+- Fun project to work on with some interesting challanges.
+- Forking the original repository is disabled.
+- Used TailwindCSS to speed up development time.
+- Made reusable layout componets - Boxes & Progress Bars.
+- Created utility to deal with Epochs.
+- THE FONT RESEMBLES COMIC SANS (eg "sidney") 🤣
+- Figma file has some issues - "Max Temp." box is shown twice & rouge white line under "Cloud Cover" progress bar.
+- Figma file weather icons need some work to match the API. [Weather API Icon docs](https://www.visualcrossing.com/resources/documentation/weather-api/defining-icon-set-in-the-weather-api/)
+
+LIVE VERSION: https://weather-app-gamma-two-45.vercel.app

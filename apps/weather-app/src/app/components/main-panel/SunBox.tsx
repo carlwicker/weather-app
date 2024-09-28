@@ -1,9 +1,9 @@
-interface DataBoxProps {
-  value: any;
+interface SunBoxProps {
+  value: string;
   label: string;
 }
 
-export default function TempBox({ value, label }: DataBoxProps) {
+export default function SunBox({ value, label }: SunBoxProps) {
   const formattedValue = value?.split(':').slice(0, 2).join(':');
 
   return (

@@ -1,6 +1,4 @@
-import { Inter } from 'next/font/google';
 import formatEpoch from '../../../utils/utils';
-import { Interface } from 'readline';
 
 interface ForcastBoxProps {
   day: any;

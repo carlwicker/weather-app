@@ -18,7 +18,7 @@ export default function Index() {
     setIsFaranheit(bool);
   };
 
-  function convertToCelsius(fahrenheit: number): number {
+  function convertToCelsius(fahrenheit: number) {
     const celsius = ((fahrenheit - 32) * 5) / 9;
     return Math.round(celsius);
   }
@@ -32,7 +32,7 @@ export default function Index() {
   }, [location]);
 
   return (
-    <div className="flex bg-[#100E1D]">
+    <div className="flex bg-[#100E1D] h-full">
       <LeftPanel
         data={data}
         setNewLocation={setNewLocation}

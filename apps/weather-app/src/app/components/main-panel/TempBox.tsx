@@ -1,7 +1,7 @@
 import { time } from 'console';
 
-interface DataBoxProps {
-  value: any;
+interface TempBoxProps {
+  value: number;
   label: string;
   convertToCelsius: Function;
   isFaranheit: boolean;
@@ -12,7 +12,7 @@ export default function TempBox({
   label,
   convertToCelsius,
   isFaranheit,
-}: DataBoxProps) {
+}: TempBoxProps) {
   return (
     <div className="bg-[#1E213A] w-1/4 h-[155px] rounded-xl text-white text-center p-5">
       <div className="">{label}</div>

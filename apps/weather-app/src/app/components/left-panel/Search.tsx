@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { FaAngleRight } from 'react-icons/fa';
 
 interface SearchProps {
@@ -13,12 +13,20 @@ export default function Search({ setNewLocation }: SearchProps) {
     setNewLocation(query);
   };
 
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value;
+    const lettersAndSpacesOnly = value
+      .replace(/[^a-zA-Z\s]/g, '')
+      .replace(/\s+/g, ' ');
+    setQuery(lettersAndSpacesOnly);
+  };
+
   return (
     <form onSubmit={handleSubmit} className="flex gap-5 items-center w-full">
       <input
         type="text"
         value={query}
-        onChange={(e) => setQuery((e.target as HTMLInputElement).value)}
+        onChange={handleInputChange}
         placeholder="Search..."
         className="h-[50px]  px-5 text-black text-xl w-full"
         name="search"
