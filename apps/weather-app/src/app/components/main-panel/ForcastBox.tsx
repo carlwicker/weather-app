@@ -17,13 +17,17 @@ export default function ForcastBox({
 
   return (
     <div className="flex flex-col lg:h-[320px] h-fit bg-[#1E213A] p-3 rounded-xl text-center lg:w-1/5 w-full">
-      <div className="text-[24px]">
+      <div
+        className={`${
+          index == 0 && 'break-words'
+        } text-[24px] min-h-[60px] leading-[26px]`}
+      >
         {index == 0 ? 'Tomorrow' : formattedDate}
       </div>
       <img
         src={`img/weather/${day.icon}.svg`}
         alt={day.conditions}
-        className="w-[144px] h-[144px] mx-auto"
+        className="w-[144px] min-h-[144px] mx-auto min-w-[120px]"
       />
       <div className="text-wrap">{day.conditions}</div>
       <div className="flex justify-between h-full items-end ">

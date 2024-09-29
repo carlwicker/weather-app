@@ -16,6 +16,7 @@ export default function OverviewGrid({
 }: OverviewGridProps) {
   return (
     <div className="flex flex-col xl:gap-10 gap-5 text-white mx-auto w-full">
+      {/* Percent Bar Section */}
       <div className="flex xl:gap-10 gap-5 w-full mt-[62px]">
         <BarBox
           label="Humidity"
@@ -29,6 +30,7 @@ export default function OverviewGrid({
         />
       </div>
       <div className="flex xl:gap-10 flex-col md:flex-row gap-5">
+        {/* Min / Max Temp Section */}
         <div className="flex xl:gap-10 gap-5 w-full">
           <TempBox
             label={'Min Temp.'}
@@ -44,13 +46,15 @@ export default function OverviewGrid({
             isFaranheit={isFaranheit}
           />
         </div>
+        {/* Sunrise / Sunset Section */}
         <div className="flex xl:gap-10 gap-5 w-full">
           <SunBox label={'Sunrise'} value={data?.currentConditions.sunrise} />
 
           <SunBox label={'Sunset'} value={data?.currentConditions.sunset} />
         </div>
       </div>
-      <div className="text-white text-[36px]">5 Day Forcast</div>{' '}
+      {/* Forcast Section */}
+      <div className="text-white text-[36px]">5 Day Forcast</div>
       <div className="flex gap-5 flex-col lg:flex-row">
         {data?.days.slice(1, 6).map((day: Object, index: number) => (
           <ForcastBox

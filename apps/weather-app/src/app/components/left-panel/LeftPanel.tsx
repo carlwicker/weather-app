@@ -17,22 +17,24 @@ export default function LeftPanel({
   const formattedDate = formatEpoch(data?.currentConditions.datetimeEpoch);
 
   return (
-    <div className="max-w-[555px] min-w-fit bg-[#1E213A] p-10 text-white flex flex-col items-center">
+    <div className="xl:max-w-[555px] w-full min-w-screen bg-[#1E213A] p-10 text-white flex flex-col items-center">
       <Search setNewLocation={setNewLocation} />
 
       {data !== null && (
         <>
-          <div className="pt-[150px] text-[64px] capitalize">
+          <div className="xl:pt-[150px] pt-[50px] lg:text-[64px] text-[32px] capitalize text-center leading-[32px] lg:leading-[64px]">
             {data?.address}
           </div>
 
-          <div className="pt-[50px] text-[36px]">{formattedDate}</div>
+          <div className="lg:pt-[50px] pt-[25px] lg:text-[36px] text-[24px] text-center">
+            {formattedDate}
+          </div>
 
           {data?.currentConditions.icon && (
             <img
               src={`img/weather/${data?.currentConditions.icon}.svg`}
               alt={data?.currentConditions.conditions}
-              className="w-[233px] h-[233px]"
+              className="lg:w-[233px] lg:h-[233px] h-[150px] w-[150px]"
             />
           )}
           <div>
@@ -44,7 +46,7 @@ export default function LeftPanel({
             </div>
           </div>
 
-          <div className="text-[30px] capitalize">
+          <div className="lg:text-[30px] text-[18px] capitalize">
             {data?.currentConditions.conditions}
           </div>
         </>
