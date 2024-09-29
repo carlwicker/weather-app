@@ -18,6 +18,7 @@ export default function Index() {
     setIsFaranheit(bool);
   };
 
+  // Make this a utility function instead of passing around components8
   function convertToCelsius(fahrenheit: number) {
     const celsius = ((fahrenheit - 32) * 5) / 9;
     return Math.round(celsius);
@@ -28,7 +29,7 @@ export default function Index() {
       `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}?key=${apiKey}`
     )
       .then((response) => response.json())
-      .then((data) => setData(data)).then;
+      .then((data) => setData(data));
   }, [location]);
 
   return (
