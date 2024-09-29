@@ -15,8 +15,8 @@ export default function OverviewGrid({
   convertToCelsius,
 }: OverviewGridProps) {
   return (
-    <div className="flex flex-col gap-10 text-white">
-      <div className="flex gap-10 w-full h-[200px] mt-[62px] min-h-[160px]">
+    <div className="flex flex-col gap-10 text-white mx-auto">
+      <div className="flex gap-10 w-full mt-[62px]">
         <BarBox
           label="Humidity"
           value={data?.currentConditions.humidity}

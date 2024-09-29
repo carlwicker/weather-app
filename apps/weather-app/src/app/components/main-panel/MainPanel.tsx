@@ -15,7 +15,7 @@ export default function MainPanel({
   convertToCelsius,
 }: MainPanelProps) {
   return (
-    <div className="p-10 w-[1024px] mx-auto">
+    <div className="p-10  bg-[#100E1D] mx-auto flex-col w-[1024px]">
       <TopBar
         setIsFaranheitHandler={setIsFaranheitHandler}
         isFaranheit={isFaranheit}
