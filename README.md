@@ -56,9 +56,10 @@ NOTES FROM DEVELOPER:
 - Disabled main panel components until data is loaded.
 - Disabled input of numbers in the search bar and more than one concurrent space.
 - Disabled form submission if the input is blank.
-- The font resembles Comic Sans (eg inputting "sidney").
+- The typeface resembles Comic Sans (eg inputting "sidney").
 - Figma file has some issues - "Max Temp." box is shown twice & rouge white line under "Cloud Cover" progress bar.
 - Figma file weather icons need some work to match the API. [Weather API Icon docs](https://www.visualcrossing.com/resources/documentation/weather-api/defining-icon-set-in-the-weather-api/)
+- Figma file doenst always display correct font size data. Not sure what's causing this issue.
 - I noticed the API key was exposed in the console when an error occurs when fetching data from useEffect directly in the page. To resolve this i used NextJS API routing functionality.
 - Used ARC toolkit to check accessibility and made fixes.
 - Added error message for users if the location cannot be found.
