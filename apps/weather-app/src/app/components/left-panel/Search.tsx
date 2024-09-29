@@ -43,6 +43,7 @@ export default function Search({
           className="h-[50px] px-5 text-black text-xl w-full focus:outline-[#585676]"
           name="search"
           aria-label="Search Input"
+          autoFocus
         />
         <button
           type="submit"
