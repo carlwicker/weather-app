@@ -5,10 +5,9 @@ import { useState, useEffect } from 'react';
 import MainPanel from './components/main-panel/MainPanel';
 
 export default function Index() {
-  const apiKey = process.env.NEXT_PUBLIC_WEATHER_API_KEY;
   const [isFaranheit, setIsFaranheit] = useState<boolean>(false);
   const [location, setLocation] = useState<string>('Brighton');
-  const [data, setData] = useState<string | null>(null);
+  const [data, setData] = useState(null);
   const [error, setError] = useState<boolean>(false);
 
   const setNewLocation = (newLocation: string) => {
@@ -19,7 +18,7 @@ export default function Index() {
     setIsFaranheit(bool);
   };
 
-  // Make this a utility function instead of passing around components8
+  // Maybe move this to utils to save passing the function down the chain
   function convertToCelsius(fahrenheit: number) {
     const celsius = ((fahrenheit - 32) * 5) / 9;
     return Math.round(celsius);
@@ -28,27 +27,23 @@ export default function Index() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(
-          `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}?key=${apiKey}`
-        );
+        const response = await fetch(`/api/weather?location=${location}`);
         if (!response.ok) {
           setError(true);
-          throw new Error('Network response was not ok');
+          throw new Error('Location not found');
         }
         const data = await response.json();
         setData(data);
       } catch (error) {
-        console.error('Error fetching data:', error);
+        console.error(error);
       }
     };
 
     fetchData();
-  }, [location, apiKey]);
+  }, [location]);
+
   return (
-    <main
-      className="bg-[#100E1D] xl:flex-row min-h-screen flex flex-col"
-      id="main"
-    >
+    <div className="bg-[#100E1D] xl:flex-row min-h-screen flex flex-col">
       <LeftPanel
         data={data}
         setNewLocation={setNewLocation}
@@ -60,11 +55,11 @@ export default function Index() {
       {data && (
         <MainPanel
           isFaranheit={isFaranheit}
-          setIsFaranheitHandler={setIsFaranheitHandler}
           data={data}
+          setIsFaranheitHandler={setIsFaranheitHandler}
           convertToCelsius={convertToCelsius}
         />
       )}
-    </main>
+    </div>
   );
 }

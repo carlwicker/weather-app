@@ -38,10 +38,10 @@ More info on working with Next.js in NX can be found [here](https://nx.dev/packa
 
 Please include some information that considers certain areas for future improvement such as:
 
-- Architectural choices.
-- Data sanitisation & validation.
-- Accessibility.
-- Potential performance bottle necks and optimisations
+- Architectural choices. ✔️
+- Data sanitisation & validation. ✔️
+- Accessibility. ✔️
+- Potential performance bottle necks and optimisations ✔️
 - High fault tolerance.
 
 NOTES FROM DEVELOPER:
@@ -58,5 +58,8 @@ NOTES FROM DEVELOPER:
 - The font resembles Comic Sans (eg inputting "sidney").
 - Figma file has some issues - "Max Temp." box is shown twice & rouge white line under "Cloud Cover" progress bar.
 - Figma file weather icons need some work to match the API. [Weather API Icon docs](https://www.visualcrossing.com/resources/documentation/weather-api/defining-icon-set-in-the-weather-api/)
+- I noticed the API key was exposed in the console when an error occurs when fetching data from useEffect directly in the page. To resolve this i used NextJS API routing functionality.
+- Used ARC toolkit to check accessibility and made fixes.
+- Added error message for users if the location cannot be found.
 
 LIVE VERSION: https://weather-app-gamma-two-45.vercel.app

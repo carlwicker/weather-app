@@ -47,7 +47,7 @@ export default function LeftPanel({
             />
           )}
           <div>
-            <div className="text-[60px]">
+            <div className="text-[60px] text-center">
               {isFaranheit
                 ? Math.round(data?.currentConditions.temp ?? 0)
                 : convertToCelsius(data?.currentConditions.temp)}
@@ -55,7 +55,7 @@ export default function LeftPanel({
             </div>
           </div>
 
-          <div className="lg:text-[30px] text-[18px] capitalize">
+          <div className="lg:text-[30px] text-[18px] capitalize text-center">
             {data?.currentConditions.conditions}
           </div>
         </div>
