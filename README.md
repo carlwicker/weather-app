@@ -44,7 +44,7 @@ Please include some information that considers certain areas for future improvem
 - Potential performance bottle necks and optimisations ✔️
 - High fault tolerance.
 
-NOTES FROM DEVELOPER:
+### Notes From Developer
 
 - Fun project to work on with some interesting challanges.
 - Forking the original repository is disabled.
