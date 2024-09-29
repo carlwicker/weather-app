@@ -15,7 +15,7 @@ export default function TopBar({
           className={`flex ${
             isFaranheit ? 'bg-[#585676] text-white' : 'bg-white text-black'
           }
-          rounded-full w-[50px] h-[50px] items-center justify-center hover:cursor-pointer select-none`}
+          rounded-full w-[50px] h-[50px] items-center justify-center hover:cursor-pointer select-none focus:outline-[#585676]`}
           onClick={() => setIsFaranheitHandler(false)}
           title="Celsius"
         >
@@ -25,7 +25,7 @@ export default function TopBar({
           className={`flex ${
             isFaranheit ? 'bg-white text-black' : 'bg-[#585676] text-white'
           } 
-          rounded-full w-[50px] h-[50px] items-center justify-center hover:cursor-pointer select-none`}
+          rounded-full w-[50px] h-[50px] items-center justify-center hover:cursor-pointer select-none focus:outline-[#585676]`}
           onClick={() => setIsFaranheitHandler(true)}
           title="Faranheit"
         >

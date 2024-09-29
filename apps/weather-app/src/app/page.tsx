@@ -46,6 +46,9 @@ export default function Index() {
   }, [location, apiKey]);
   return (
     <main className="bg-[#100E1D] xl:flex-row min-h-screen flex flex-col">
+      <a href="#main" className="hidden">
+        Skip to main content
+      </a>
       <LeftPanel
         data={data}
         setNewLocation={setNewLocation}
