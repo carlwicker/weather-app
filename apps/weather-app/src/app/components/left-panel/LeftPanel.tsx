@@ -42,7 +42,7 @@ export default function LeftPanel({
             <img
               src={`img/weather/${data?.currentConditions.icon}.svg`}
               alt={data?.currentConditions.conditions}
-              className="lg:w-[233px] lg:h-[233px] h-[150px] w-[150px]"
+              className="lg:w-[233px] lg:h-[233px] h-[150px] w-[150px] mx-auto"
               role="img"
             />
           )}
