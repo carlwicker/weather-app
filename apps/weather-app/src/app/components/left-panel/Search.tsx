@@ -30,7 +30,11 @@ export default function Search({
 
   return (
     <div className="w-full">
-      <form onSubmit={handleSubmit} className="flex gap-5 items-center">
+      <form
+        onSubmit={handleSubmit}
+        className="flex gap-5 items-center"
+        role="search"
+      >
         <input
           type="text"
           value={query}
@@ -38,13 +42,14 @@ export default function Search({
           placeholder="Search..."
           className="h-[50px] px-5 text-black text-xl w-full"
           name="search"
+          aria-label="Search Input"
         />
         <button
           type="submit"
           className="min-w-[45px] min-h-[45px] rounded-full bg-white flex justify-center items-center"
           disabled={!query}
           title="Search"
-          aria-label="Search"
+          aria-label="Search Submit"
         >
           <FaAngleRight size={'35px'} className="fill-[#111]" />
         </button>

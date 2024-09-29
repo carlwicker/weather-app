@@ -45,7 +45,7 @@ export default function Index() {
     fetchData();
   }, [location, apiKey]);
   return (
-    <div className="bg-[#100E1D] xl:flex-row min-h-screen flex flex-col">
+    <main className="bg-[#100E1D] xl:flex-row min-h-screen flex flex-col">
       <LeftPanel
         data={data}
         setNewLocation={setNewLocation}
@@ -62,6 +62,6 @@ export default function Index() {
           convertToCelsius={convertToCelsius}
         />
       )}
-    </div>
+    </main>
   );
 }
