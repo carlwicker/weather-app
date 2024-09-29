@@ -20,7 +20,7 @@ export default function LeftPanel({
     <div className="xl:max-w-[555px] w-full min-w-screen bg-[#1E213A] p-10 text-white flex flex-col items-center">
       <Search setNewLocation={setNewLocation} />
 
-      {data !== null && (
+      {data && (
         <>
           <div className="xl:pt-[150px] pt-[50px] lg:text-[64px] text-[32px] capitalize text-center leading-[32px] lg:leading-[64px]">
             {data?.address}

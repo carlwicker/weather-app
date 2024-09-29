@@ -39,12 +39,14 @@ export default function Index() {
         isFaranheit={isFaranheit}
         convertToCelsius={convertToCelsius}
       />
-      <MainPanel
-        isFaranheit={isFaranheit}
-        setIsFaranheitHandler={setIsFaranheitHandler}
-        data={data}
-        convertToCelsius={convertToCelsius}
-      />
+      {data && (
+        <MainPanel
+          isFaranheit={isFaranheit}
+          setIsFaranheitHandler={setIsFaranheitHandler}
+          data={data}
+          convertToCelsius={convertToCelsius}
+        />
+      )}
     </div>
   );
 }
