@@ -62,5 +62,6 @@ NOTES FROM DEVELOPER:
 - I noticed the API key was exposed in the console when an error occurs when fetching data from useEffect directly in the page. To resolve this i used NextJS API routing functionality.
 - Used ARC toolkit to check accessibility and made fixes.
 - Added error message for users if the location cannot be found.
+- Weather API requires a subscription to achieve 5000+ request a day, free version limited to 1000 requests per day.
 
 LIVE VERSION: https://weather-app-gamma-two-45.vercel.app
