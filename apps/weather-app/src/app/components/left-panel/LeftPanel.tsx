@@ -21,7 +21,7 @@ export default function LeftPanel({
   const formattedDate = formatEpoch(data?.currentConditions.datetimeEpoch);
 
   return (
-    <div className="xl:max-w-[555px] w-full min-w-screen bg-[#1E213A] p-10 text-white flex flex-col items-center">
+    <div className="xl:max-w-[555px] w-full min-w-screen bg-[#1E213A] p-10 text-white flex flex-col">
       <Search
         setNewLocation={setNewLocation}
         error={error}
@@ -55,7 +55,7 @@ export default function LeftPanel({
             </div>
           </div>
 
-          <div className="lg:text-[30px] text-[18px] capitalize text-center">
+          <div className="lg:text-[30px] text-[18px] capitalize mx-auto text-center">
             {data?.currentConditions.conditions}
           </div>
         </div>
