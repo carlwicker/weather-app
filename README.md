@@ -6,15 +6,15 @@ LIVE VERSION: https://weather-app-gamma-two-45.vercel.app
 
 ### Objective
 
-Using a NX monorepo, TypeScript, React and Next.js your task is to build a Weather App.
+Using a NX monorepo, TypeScript, React and Next.js your task is to build a Weather App. ✔️
 
 ### Brief
 
-In England, we love talking about the weather. To help people have informed conversations about the weather; your assignment is to use data from the [Visual Crossing Weather API](https://www.visualcrossing.com/resources/documentation/weather-api/timeline-weather-api/) and display it so it looks like [this design document](https://www.figma.com/file/FNdVsOUJA53CWMW9mnraYk/Weather-App?type=design&node-id=0%3A1&t=FPsFSmGIgDaH48F6-1). It doesn't have to be pixel pefect- but should maintain functional and operational integrity when used on different types of devices with different screen resolutions.
+In England, we love talking about the weather. To help people have informed conversations about the weather; your assignment is to use data from the [Visual Crossing Weather API](https://www.visualcrossing.com/resources/documentation/weather-api/timeline-weather-api/) and display it so it looks like [this design document](https://www.figma.com/file/FNdVsOUJA53CWMW9mnraYk/Weather-App?type=design&node-id=0%3A1&t=FPsFSmGIgDaH48F6-1). It doesn't have to be pixel pefect- but should maintain functional and operational integrity when used on different types of devices with different screen resolutions. ✔️
 
 ### Tasks
 
-Fork this branch and then design, organise, test, lint and document your code using the scenario of it being deployed to production and be used by a user base of approx. 5,000 daily active users.
+Fork this branch and then design, organise, test, lint and document your code using the scenario of it being deployed to production and be used by a user base of approx. 5,000 daily active users. ✔️
 
 You have complete freedom over how and how long you want to spend to deliver the following requirements:
 
@@ -55,6 +55,7 @@ NOTES FROM DEVELOPER:
 - Used Flexbox throughout for ease of switch flex-row / flex-col for responsive components.
 - Disabled main panel components until data is loaded.
 - Disabled input of numbers in the search bar and more than one concurrent space.
+- Disabled form submission if the input is blank.
 - The font resembles Comic Sans (eg inputting "sidney").
 - Figma file has some issues - "Max Temp." box is shown twice & rouge white line under "Cloud Cover" progress bar.
 - Figma file weather icons need some work to match the API. [Weather API Icon docs](https://www.visualcrossing.com/resources/documentation/weather-api/defining-icon-set-in-the-weather-api/)
