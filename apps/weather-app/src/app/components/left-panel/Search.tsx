@@ -14,8 +14,8 @@ export default function Search({
 }: SearchProps) {
   const [query, setQuery] = useState<string>('');
 
-  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
     const result = await setNewLocation(query);
   };
 
