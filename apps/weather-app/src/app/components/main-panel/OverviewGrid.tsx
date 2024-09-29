@@ -51,7 +51,7 @@ export default function OverviewGrid({
         </div>
       </div>
       <div className="text-white text-[36px]">5 Day Forcast</div>{' '}
-      <div className="flex gap-5 flex-col xl:flex-row">
+      <div className="flex gap-5 flex-col lg:flex-row">
         {data?.days.slice(1, 6).map((day: Object, index: number) => (
           <ForcastBox
             key={index}

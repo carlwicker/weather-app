@@ -16,7 +16,7 @@ export default function ForcastBox({
   const formattedDate = formatEpoch(day.datetimeEpoch);
 
   return (
-    <div className="flex flex-col h-[320px] bg-[#1E213A] p-3 rounded-xl text-center w-1/5">
+    <div className="flex flex-col lg:h-[320px] h-fit bg-[#1E213A] p-3 rounded-xl text-center lg:w-1/5 w-full">
       <div className="text-[24px]">
         {index == 0 ? 'Tomorrow' : formattedDate}
       </div>
