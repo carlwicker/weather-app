@@ -40,7 +40,7 @@ export default function Search({
           value={query}
           onChange={handleInputChange}
           placeholder="Search..."
-          className="h-[50px] px-5 text-black text-xl w-full"
+          className="h-[50px] px-5 text-black text-xl w-full focus:outline-[#100E1D]"
           name="search"
           aria-label="Search Input"
         />
