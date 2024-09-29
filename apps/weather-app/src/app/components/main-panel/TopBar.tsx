@@ -8,8 +8,8 @@ export default function TopBar({
   isFaranheit,
 }: TopBarProps) {
   return (
-    <div className="flex h-[50px] justify-between items-center w-full">
-      <div className="text-white text-[36px]">Day Overview</div>
+    <div className="flex h-[50px] justify-between items-center">
+      <div className="text-white xl:text-[36px] text-[28px]">Day Overview</div>
       <div className="flex gap-2 text-[23px]">
         <div
           className={`flex ${

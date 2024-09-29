@@ -17,7 +17,7 @@ export default function LeftPanel({
   const formattedDate = formatEpoch(data?.currentConditions.datetimeEpoch);
 
   return (
-    <div className="w-[555px] min-w-fit bg-[#1E213A] p-10 text-white flex flex-col items-center">
+    <div className="max-w-[555px] min-w-fit bg-[#1E213A] p-10 text-white flex flex-col items-center">
       <Search setNewLocation={setNewLocation} />
 
       {data !== null && (

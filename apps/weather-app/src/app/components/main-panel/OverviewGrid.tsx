@@ -15,8 +15,8 @@ export default function OverviewGrid({
   convertToCelsius,
 }: OverviewGridProps) {
   return (
-    <div className="flex flex-col gap-10 text-white mx-auto">
-      <div className="flex gap-10 w-full mt-[62px]">
+    <div className="flex flex-col xl:gap-10 gap-5 text-white mx-auto w-full">
+      <div className="flex xl:gap-10 gap-5 w-full mt-[62px]">
         <BarBox
           label="Humidity"
           value={data?.currentConditions.humidity}
@@ -28,29 +28,30 @@ export default function OverviewGrid({
           barColor="#FAFF00"
         />
       </div>
+      <div className="flex xl:gap-10 flex-col md:flex-row gap-5">
+        <div className="flex xl:gap-10 gap-5 w-full">
+          <TempBox
+            label={'Min Temp.'}
+            value={data?.days[0].tempmin}
+            convertToCelsius={convertToCelsius}
+            isFaranheit={isFaranheit}
+          />
 
-      <div className="flex gap-10">
-        <TempBox
-          label={'Min Temp.'}
-          value={data?.days[0].tempmin}
-          convertToCelsius={convertToCelsius}
-          isFaranheit={isFaranheit}
-        />
+          <TempBox
+            label={'Max Temp.'}
+            value={data?.days[0].tempmax}
+            convertToCelsius={convertToCelsius}
+            isFaranheit={isFaranheit}
+          />
+        </div>
+        <div className="flex xl:gap-10 gap-5 w-full">
+          <SunBox label={'Sunrise'} value={data?.currentConditions.sunrise} />
 
-        <TempBox
-          label={'Max Temp.'}
-          value={data?.days[0].tempmax}
-          convertToCelsius={convertToCelsius}
-          isFaranheit={isFaranheit}
-        />
-
-        <SunBox label={'Sunrise'} value={data?.currentConditions.sunrise} />
-
-        <SunBox label={'Sunset'} value={data?.currentConditions.sunset} />
+          <SunBox label={'Sunset'} value={data?.currentConditions.sunset} />
+        </div>
       </div>
-
-      <div className="text-white text-[36px]">5 Day Forcast</div>
-      <div className="flex gap-5">
+      <div className="text-white text-[36px]">5 Day Forcast</div>{' '}
+      <div className="flex gap-5 flex-col xl:flex-row">
         {data?.days.slice(1, 6).map((day: Object, index: number) => (
           <ForcastBox
             key={index}

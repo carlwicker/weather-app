@@ -14,7 +14,7 @@ export default function TempBox({
   isFaranheit,
 }: TempBoxProps) {
   return (
-    <div className="bg-[#1E213A] w-1/4 h-[155px] rounded-xl text-white text-center p-5">
+    <div className="bg-[#1E213A] h-[155px] rounded-xl text-white text-center p-5 w-full">
       <div className="">{label}</div>
       <div className="mt-5 text-[36px]">
         {isFaranheit ? Math.round(value) : convertToCelsius(value)}

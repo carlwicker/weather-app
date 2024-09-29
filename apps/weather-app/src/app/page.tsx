@@ -32,7 +32,7 @@ export default function Index() {
   }, [location]);
 
   return (
-    <div className="bg-[#100E1D] flex min-h-screen">
+    <div className="bg-[#100E1D] xl:flex-row min-h-screen flex flex-col">
       <LeftPanel
         data={data}
         setNewLocation={setNewLocation}
