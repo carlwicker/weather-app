@@ -22,7 +22,7 @@ You have complete freedom over how and how long you want to spend to deliver the
 - On first load, the app should show the weather for a specific place. ✔️
 - Users can see accurate and relevant weather information based on their search. ✔️
 - Users are able to see relevant information displayed in different metrics. ✔️
-- Users are notified if there is no information returned from their search. - WIP
+- Users are notified if there is no information returned from their search. ✔️
 
 ### Development
 
@@ -52,7 +52,7 @@ NOTES FROM DEVELOPER:
 - Fully responsive layout.
 - Made reusable layout componets - Boxes & Progress Bars.
 - Created utility to deal with Epochs.
-- Used Flexbox throughout for ease of switch flex-row / flex-col for responsiveness.
+- Used Flexbox throughout for ease of switch flex-row / flex-col for responsive components.
 - Disabled main panel components until data is loaded.
 - Disabled input of numbers in the search bar and more than one concurrent space.
 - The font resembles Comic Sans (eg inputting "sidney").

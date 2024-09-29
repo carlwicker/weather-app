@@ -6,6 +6,8 @@ interface LeftPanelProps {
   isFaranheit: boolean;
   data: any;
   convertToCelsius: Function;
+  error: boolean;
+  setError: Function;
 }
 
 export default function LeftPanel({
@@ -13,12 +15,18 @@ export default function LeftPanel({
   isFaranheit,
   data,
   convertToCelsius,
+  error,
+  setError,
 }: LeftPanelProps) {
   const formattedDate = formatEpoch(data?.currentConditions.datetimeEpoch);
 
   return (
     <div className="xl:max-w-[555px] w-full min-w-screen bg-[#1E213A] p-10 text-white flex flex-col items-center">
-      <Search setNewLocation={setNewLocation} />
+      <Search
+        setNewLocation={setNewLocation}
+        error={error}
+        setError={setError}
+      />
 
       {data && (
         <>
