@@ -29,7 +29,7 @@ export default function LeftPanel({
       />
 
       {data && (
-        <>
+        <div role="navigation">
           <div className="xl:pt-[150px] pt-[50px] lg:text-[64px] text-[32px] capitalize text-center leading-[32px] lg:leading-[64px]">
             {data?.address}
           </div>
@@ -43,7 +43,7 @@ export default function LeftPanel({
               src={`img/weather/${data?.currentConditions.icon}.svg`}
               alt={data?.currentConditions.conditions}
               className="lg:w-[233px] lg:h-[233px] h-[150px] w-[150px]"
-              role="presentation"
+              role="img"
             />
           )}
           <div>
@@ -58,7 +58,7 @@ export default function LeftPanel({
           <div className="lg:text-[30px] text-[18px] capitalize">
             {data?.currentConditions.conditions}
           </div>
-        </>
+        </div>
       )}
     </div>
   );

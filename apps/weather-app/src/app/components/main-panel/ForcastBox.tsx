@@ -24,7 +24,7 @@ export default function ForcastBox({
         src={`img/weather/${day.icon}.svg`}
         alt={day.conditions}
         className="w-[144px] min-h-[144px] mx-auto min-w-[120px]"
-        role="presentation"
+        role="img"
       />
       <div className="text-wrap">{day.conditions}</div>
       <div className="flex justify-between h-full items-end ">

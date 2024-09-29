@@ -44,6 +44,7 @@ export default function Search({
           name="search"
           aria-label="Search Input"
           autoFocus
+          autoComplete="on"
         />
         <button
           type="submit"
@@ -51,8 +52,14 @@ export default function Search({
           disabled={!query}
           title="Search"
           aria-label="Search Submit"
+          role="img"
         >
-          <FaAngleRight size={'35px'} className="fill-[#111]" />
+          <FaAngleRight
+            size={'35px'}
+            className="fill-[#111]"
+            role="img"
+            title="Search"
+          />
         </button>
       </form>
       {error && (

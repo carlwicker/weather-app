@@ -45,7 +45,10 @@ export default function Index() {
     fetchData();
   }, [location, apiKey]);
   return (
-    <main className="bg-[#100E1D] xl:flex-row min-h-screen flex flex-col">
+    <main
+      className="bg-[#100E1D] xl:flex-row min-h-screen flex flex-col"
+      id="main"
+    >
       <LeftPanel
         data={data}
         setNewLocation={setNewLocation}
