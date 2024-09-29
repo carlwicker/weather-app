@@ -22,7 +22,12 @@ export default function RootLayout({
         <title>{metadata.title}</title>
         <meta name="description" content={metadata.description} />
       </head>
-      <body className={`bg-[#100E1D] ${capriola.className}`}>{children}</body>
+      <body className={`bg-[#100E1D] ${capriola.className}`}>
+        <a href="#main" className="hidden">
+          Skip to main content
+        </a>
+        {children}
+      </body>
     </html>
   );
 }
