@@ -35,6 +35,7 @@ export default function Search({ setNewLocation }: SearchProps) {
         type="submit"
         className="min-w-[45px] min-h-[45px] rounded-full bg-white flex justify-center items-center "
         disabled={!query}
+        title="Search"
       >
         <FaAngleRight size={'35px'} className="fill-[#111]" />
       </button>

@@ -49,10 +49,13 @@ NOTES FROM DEVELOPER:
 - Fun project to work on with some interesting challanges.
 - Forking the original repository is disabled.
 - Used TailwindCSS to speed up development time.
+- Fully responsive layout.
 - Made reusable layout componets - Boxes & Progress Bars.
 - Created utility to deal with Epochs.
+- Used Flexbox throughout for ease of switch flex-row / flex-col for responsiveness.
+- Disabled main panel components until data is loaded.
 - Disabled input of numbers in the search bar and more than one concurrent space.
-- THE FONT RESEMBLES COMIC SANS (eg "sidney"). 🤣
+- The font resembles Comic Sans (eg inputting "sidney").
 - Figma file has some issues - "Max Temp." box is shown twice & rouge white line under "Cloud Cover" progress bar.
 - Figma file weather icons need some work to match the API. [Weather API Icon docs](https://www.visualcrossing.com/resources/documentation/weather-api/defining-icon-set-in-the-weather-api/)
 
