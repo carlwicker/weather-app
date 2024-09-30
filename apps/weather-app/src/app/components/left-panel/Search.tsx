@@ -48,7 +48,9 @@ export default function Search({
         />
         <button
           type="submit"
-          className="min-w-[45px] min-h-[45px] rounded-full bg-white flex justify-center items-center focus:outline-[#585676]"
+          className={`${
+            query.length == 0 && 'opacity-50'
+          } min-w-[45px] min-h-[45px] rounded-full bg-white flex justify-center items-center focus:outline-[#585676]`}
           disabled={!query}
           title="Search"
           aria-label="Search Submit"
