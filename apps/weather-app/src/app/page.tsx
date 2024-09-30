@@ -10,11 +10,11 @@ export default function Index() {
   const [data, setData] = useState<Object | null>(null);
   const [error, setError] = useState<boolean>(false);
 
-  const setNewLocation = (newLocation: string) => {
+  const setNewLocation = async (newLocation: string): Promise<void> => {
     setLocation(newLocation);
   };
 
-  const setIsFaranheitHandler = (bool: boolean) => {
+  const setIsFaranheitHandler = async (bool: boolean): Promise<void> => {
     setIsFaranheit(bool);
   };
 

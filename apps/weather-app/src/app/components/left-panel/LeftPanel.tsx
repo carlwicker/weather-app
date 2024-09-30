@@ -2,11 +2,11 @@ import Search from './Search';
 import { formatEpoch, convertToCelsius } from '../../../utils/utils';
 
 interface LeftPanelProps {
-  setNewLocation: Function;
+  setNewLocation: (location: string) => Promise<void>;
   isFaranheit: boolean;
   data: any;
   error: boolean;
-  setError: Function;
+  setError: (error: boolean) => void;
 }
 
 export default function LeftPanel({

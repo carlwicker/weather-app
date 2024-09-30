@@ -51,7 +51,7 @@ Please include some information that considers certain areas for future improvem
 - Used TailwindCSS to speed up development time.
 - Fully responsive layout.
 - Made reusable layout componets - Boxes & Progress Bars.
-- Created utility to deal with Epochs.
+- Created utility to deal with Epochs and Coverting to Celsius.
 - Used Flexbox throughout for ease of switch flex-row / flex-col for responsive components.
 - Disabled main panel components until data is loaded.
 - Disabled input of numbers in the search bar and more than one concurrent space.

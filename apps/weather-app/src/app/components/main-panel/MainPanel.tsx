@@ -2,7 +2,7 @@ import OverviewGrid from './OverviewGrid';
 import TopBar from './TopBar';
 
 interface MainPanelProps {
-  setIsFaranheitHandler: Function;
+  setIsFaranheitHandler: (isFaranheit: boolean) => Promise<void>;
   isFaranheit: boolean;
   data: any;
 }

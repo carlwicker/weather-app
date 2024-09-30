@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import { FaAngleRight } from 'react-icons/fa';
 
 interface SearchProps {
-  setNewLocation: Function;
+  setNewLocation: (location: string) => Promise<void>;
   error: boolean;
-  setError: Function;
+  setError: (error: boolean) => void;
 }
 
 export default function Search({
