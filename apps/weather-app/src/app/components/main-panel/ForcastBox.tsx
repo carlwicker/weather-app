@@ -1,16 +1,14 @@
-import formatEpoch from '../../../utils/utils';
+import { formatEpoch, convertToCelsius } from '../../../utils/utils';
 
 interface ForcastBoxProps {
   day: any;
   index: number;
-  convertToCelsius: Function;
   isFaranheit: boolean;
 }
 
 export default function ForcastBox({
   day,
   index,
-  convertToCelsius,
   isFaranheit,
 }: ForcastBoxProps) {
   const formattedDate = formatEpoch(day.datetimeEpoch);

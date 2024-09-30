@@ -5,14 +5,12 @@ interface MainPanelProps {
   setIsFaranheitHandler: Function;
   isFaranheit: boolean;
   data: any;
-  convertToCelsius: Function;
 }
 
 export default function MainPanel({
   setIsFaranheitHandler,
   isFaranheit,
   data,
-  convertToCelsius,
 }: MainPanelProps) {
   return (
     <div className="xl:p-10 p-5 bg-[#100E1D] mx-auto flex-col xl:max-w-[1024px] w-full">
@@ -20,11 +18,7 @@ export default function MainPanel({
         setIsFaranheitHandler={setIsFaranheitHandler}
         isFaranheit={isFaranheit}
       />
-      <OverviewGrid
-        data={data}
-        convertToCelsius={convertToCelsius}
-        isFaranheit={isFaranheit}
-      />
+      <OverviewGrid data={data} isFaranheit={isFaranheit} />
     </div>
   );
 }

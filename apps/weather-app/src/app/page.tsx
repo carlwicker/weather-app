@@ -7,7 +7,7 @@ import MainPanel from './components/main-panel/MainPanel';
 export default function Index() {
   const [isFaranheit, setIsFaranheit] = useState<boolean>(false);
   const [location, setLocation] = useState<string>('Brighton');
-  const [data, setData] = useState(null);
+  const [data, setData] = useState<Object | null>(null);
   const [error, setError] = useState<boolean>(false);
 
   const setNewLocation = (newLocation: string) => {
@@ -17,12 +17,6 @@ export default function Index() {
   const setIsFaranheitHandler = (bool: boolean) => {
     setIsFaranheit(bool);
   };
-
-  // Maybe move this to utils to save passing the function down the chain
-  function convertToCelsius(fahrenheit: number) {
-    const celsius = ((fahrenheit - 32) * 5) / 9;
-    return Math.round(celsius);
-  }
 
   useEffect(() => {
     const fetchData = async () => {
@@ -48,7 +42,6 @@ export default function Index() {
         data={data}
         setNewLocation={setNewLocation}
         isFaranheit={isFaranheit}
-        convertToCelsius={convertToCelsius}
         error={error}
         setError={setError}
       />
@@ -57,7 +50,6 @@ export default function Index() {
           isFaranheit={isFaranheit}
           data={data}
           setIsFaranheitHandler={setIsFaranheitHandler}
-          convertToCelsius={convertToCelsius}
         />
       )}
     </div>

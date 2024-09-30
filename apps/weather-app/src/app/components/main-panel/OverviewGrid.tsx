@@ -6,14 +6,9 @@ import ForcastBox from './ForcastBox';
 interface OverviewGridProps {
   data: any;
   isFaranheit: boolean;
-  convertToCelsius: Function;
 }
 
-export default function OverviewGrid({
-  data,
-  isFaranheit,
-  convertToCelsius,
-}: OverviewGridProps) {
+export default function OverviewGrid({ data, isFaranheit }: OverviewGridProps) {
   return (
     <div className="flex flex-col xl:gap-10 gap-5 text-white mx-auto w-full">
       {/* Percent Bar Section */}
@@ -35,14 +30,12 @@ export default function OverviewGrid({
           <TempBox
             label={'Min Temp.'}
             value={data?.days[0].tempmin}
-            convertToCelsius={convertToCelsius}
             isFaranheit={isFaranheit}
           />
 
           <TempBox
             label={'Max Temp.'}
             value={data?.days[0].tempmax}
-            convertToCelsius={convertToCelsius}
             isFaranheit={isFaranheit}
           />
         </div>
@@ -61,7 +54,6 @@ export default function OverviewGrid({
             key={index}
             day={day}
             index={index}
-            convertToCelsius={convertToCelsius}
             isFaranheit={isFaranheit}
           />
         ))}

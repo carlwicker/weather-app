@@ -1,18 +1,12 @@
-import { time } from 'console';
+import { convertToCelsius } from '../../../utils/utils';
 
 interface TempBoxProps {
   value: number;
   label: string;
-  convertToCelsius: Function;
   isFaranheit: boolean;
 }
 
-export default function TempBox({
-  value,
-  label,
-  convertToCelsius,
-  isFaranheit,
-}: TempBoxProps) {
+export default function TempBox({ value, label, isFaranheit }: TempBoxProps) {
   return (
     <div className="bg-[#1E213A] h-[155px] rounded-xl text-white text-center p-5 w-full">
       <div className="">{label}</div>

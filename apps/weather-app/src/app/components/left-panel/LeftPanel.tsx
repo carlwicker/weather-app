@@ -1,11 +1,10 @@
 import Search from './Search';
-import formatEpoch from '../../../utils/utils';
+import { formatEpoch, convertToCelsius } from '../../../utils/utils';
 
 interface LeftPanelProps {
   setNewLocation: Function;
   isFaranheit: boolean;
   data: any;
-  convertToCelsius: Function;
   error: boolean;
   setError: Function;
 }
@@ -14,7 +13,6 @@ export default function LeftPanel({
   setNewLocation,
   isFaranheit,
   data,
-  convertToCelsius,
   error,
   setError,
 }: LeftPanelProps) {
@@ -29,7 +27,7 @@ export default function LeftPanel({
       />
 
       {data && (
-        <div role="navigation">
+        <div role="navigation text-center">
           <div className="xl:pt-[150px] pt-[50px] lg:text-[64px] text-[32px] capitalize text-center leading-[32px] lg:leading-[64px]">
             {data?.address}
           </div>
@@ -55,7 +53,7 @@ export default function LeftPanel({
             </div>
           </div>
 
-          <div className="lg:text-[30px] text-[18px] capitalize mx-auto text-center">
+          <div className="lg:text-[30px] text-[18px] capitalize text-center">
             {data?.currentConditions.conditions}
           </div>
         </div>
